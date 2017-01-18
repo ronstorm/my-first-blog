@@ -9,17 +9,14 @@
             <h1><a href="">Ron's Blog</a> </h1>
         </div>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Not since the days of a young Wasim Akram and a befuddled Allan Border had Pakistan beaten Australia at the MCG, in a match played as part of the one-off World Championship of Cricket. And not since January 2005 had Pakistan beaten Australia in Australia, in any format.</p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>published: {{ post.published_date }}</p>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Pakistan ended both those dry spells in a contest that illustrated familiar strengths for the visitors and plenty of increasingly tiresome weaknesses among the hosts. On a sluggish surface Australia's batsmen were cornered by Pakistan's spinners, allowing for a chase within the modest reach of their batsmen.</p>
-        </div>
     </body>
 
 </html>
